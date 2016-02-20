@@ -1,3 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <items version="2" />
 
+=======
+<items version="2" >
+
+    <item
+        jar="/Users/lluis/Documents/HACKUPC/new/Sahaya/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/Users/lluis/Documents/HACKUPC/new/Sahaya/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.1.1_7c42078a2692092bafbdad081ea970fa591aeee8.jar" />
+    </item>
+    <item
+        jar="/Users/lluis/Documents/HACKUPC/new/Sahaya/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="/Users/lluis/Documents/HACKUPC/new/Sahaya/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.1.1_839d00ae7a5d1b876919217b125cb19a73b917d8.jar" />
+    </item>
+    <item
+        jar="/Users/lluis/Documents/HACKUPC/new/Sahaya/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/Users/lluis/Documents/HACKUPC/new/Sahaya/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.1.1_2d0d349581c0e7e0989745c75c0508b0efc8ddd3.jar" />
+    </item>
+    <item
+        jar="/Users/lluis/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="/Users/lluis/Documents/HACKUPC/new/Sahaya/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1_4d15730011ce7d4b703a3c3f77c9a51336fe3551.jar" />
+    </item>
+    <item
+        jar="/Users/lluis/Documents/HACKUPC/new/Sahaya/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="/Users/lluis/Documents/HACKUPC/new/Sahaya/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1_d193393a6f39d2fdb66c6030418f67c7694c2b1b.jar" />
+    </item>
+    <item
+        jar="/Users/lluis/Documents/HACKUPC/new/Sahaya/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="/Users/lluis/Documents/HACKUPC/new/Sahaya/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.1.1_66bb9f2696770e842ff9e2c80f671433742ab42b.jar" />
+    </item>
+
+</items>
+>>>>>>> ff4bbfa0b5d11e8d53973106f9fe1acb87e455a8
