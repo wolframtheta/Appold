@@ -43,8 +43,6 @@ public class SearchActivity extends ListActivity {
 
         final EditText SearchText = (EditText)findViewById(R.id.editText);
 
-        final Button SearchButton = (Button)findViewById(R.id.button);
-
         SearchText.addTextChangedListener(new TextWatcher() {
 
             @Override
@@ -58,17 +56,11 @@ public class SearchActivity extends ListActivity {
             @Override
             public void onTextChanged(CharSequence s, int start,
                                       int before, int count) {
-                if(s.length() != 0)
-                    SearchButton.setText("");
-            }
-        });
+                if(s.length() != 0) {
+                    packageManager = getPackageManager();
 
-        SearchButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                packageManager = getPackageManager();
-
-                new LoadApplications().execute(SearchText.getText().toString());
+                    new LoadApplications().execute(SearchText.getText().toString());
+                }
             }
         });
 
@@ -76,31 +68,6 @@ public class SearchActivity extends ListActivity {
 
         }
 
-        /*public boolean onCreateOptionsMenu(Menu menu) {
-            MenuInflater inflater = getMenuInflater();
-            inflater.inflate(R.menu.menu, menu);
-
-            return true;
-        }
-
-        public boolean onOptionsItemSelected(MenuItem item) {
-            boolean result = true;
-
-            switch (item.getItemId()) {
-                case R.id.menu_about: {
-                    displayAboutDialog();
-
-                    break;
-                }
-                default: {
-                    result = super.onOptionsItemSelected(item);
-
-                    break;
-                }
-            }
-
-            return result;
-        }*/
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
@@ -153,14 +120,18 @@ public class SearchActivity extends ListActivity {
         @Override
         protected void onPostExecute(Void result) {
             setListAdapter(listadaptor);
-            progress.dismiss();
+            //progress.dismiss();
             super.onPostExecute(result);
         }
 
         @Override
         protected void onPreExecute() {
+           /* if(progress !=null)
+            {
+                progress = null;
+            }
             progress = ProgressDialog.show(SearchActivity.this, null,
-                    "Loading application info...");
+                    "Loading application info...");*/
             super.onPreExecute();
         }
 
