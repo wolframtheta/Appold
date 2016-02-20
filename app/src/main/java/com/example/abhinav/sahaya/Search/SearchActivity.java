@@ -66,15 +66,14 @@ public class SearchActivity extends ListActivity {
         SearchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), CallsActivity.class);
-                startActivity(intent);
+                packageManager = getPackageManager();
+
+                new LoadApplications().execute(SearchText.getText().toString());
             }
         });
 
 
-            packageManager = getPackageManager();
 
-            new LoadApplications().execute();
         }
 
         /*public boolean onCreateOptionsMenu(Menu menu) {
@@ -117,13 +116,10 @@ public class SearchActivity extends ListActivity {
         } catch (ActivityNotFoundException e) {
             Toast.makeText(SearchActivity.this, e.getMessage(),
                     Toast.LENGTH_LONG).show();
-        } catch (Exception e) {
-            Toast.makeText(SearchActivity.this, e.getMessage(),
-                    Toast.LENGTH_LONG).show();
         }
     }
     private List<ApplicationInfo> checkForLaunchIntent(List<ApplicationInfo> list) {
-        ArrayList<ApplicationInfo> applist = new ArrayList<ApplicationInfo>();
+        ArrayList<ApplicationInfo> applist = new ArrayList<>();
         for (ApplicationInfo info : list) {
             try {
                 if (null != packageManager.getLaunchIntentForPackage(info.packageName)) {
@@ -137,14 +133,14 @@ public class SearchActivity extends ListActivity {
         return applist;
     }
 
-    private class LoadApplications extends AsyncTask<Void, Void, Void> {
+    private class LoadApplications extends AsyncTask<String, Void, Void> {
         private ProgressDialog progress = null;
 
         @Override
-        protected Void doInBackground(Void... params) {
+        protected Void doInBackground(String... params) {
             applist = checkForLaunchIntent(packageManager.getInstalledApplications(PackageManager.GET_META_DATA));
             listadaptor = new ApplicationAdapter(SearchActivity.this,
-                    R.layout.app_list_row, applist);
+                    R.layout.app_list_row, applist,params[0]);
 
             return null;
         }

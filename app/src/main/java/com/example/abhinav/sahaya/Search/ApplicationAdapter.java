@@ -5,6 +5,7 @@ import java.util.List;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,13 +19,16 @@ public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
     private List<ApplicationInfo> appsList = null;
     private Context context;
     private PackageManager packageManager;
+    private String SearchText;
 
     public ApplicationAdapter(Context context, int textViewResourceId,
-                              List<ApplicationInfo> appsList) {
+                              List<ApplicationInfo> appsList,String search) {
         super(context, textViewResourceId, appsList);
         this.context = context;
         this.appsList = appsList;
         packageManager = context.getPackageManager();
+        SearchText = search;
+        sortList();
     }
 
     @Override
@@ -40,6 +44,22 @@ public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
     @Override
     public long getItemId(int position) {
         return position;
+    }
+
+    public void sortList(){
+        for (int i = 0; i < getCount();++i){
+            if(getCount() == 0) break;
+            ApplicationInfo applicationInfo = appsList.get(i);
+            if(null != applicationInfo) {
+                String name = (String) applicationInfo.loadLabel(packageManager);
+                String aux = SearchText;
+                if (!name.equals(aux)) {
+                    appsList.remove(i);
+                    --i;
+                    //appsList.set(i,null);
+                }
+            }
+        }
     }
 
     @Override
@@ -61,4 +81,4 @@ public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
         }
         return view;
     }
-};
+}
