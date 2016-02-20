@@ -1,3 +1,4 @@
+/*
 package com.example.abhinav.sahaya.Calls;
 
 import android.annotation.TargetApi;
@@ -22,9 +23,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+*/
 /**
  * Created by abhinav on 20/2/16.
- */
+ *//*
+
 public class SelectUserAdapter extends BaseAdapter {
 
     public List<SelectUser> _data;
@@ -100,7 +103,9 @@ public class SelectUserAdapter extends BaseAdapter {
 
         Log.e("Image Thumb", "--------------" + data.getThumb());
 
-        /*// Set check box listener android
+        */
+/*//*
+/ Set check box listener android
         v.check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -111,7 +116,8 @@ public class SelectUserAdapter extends BaseAdapter {
                     data.setCheckedBox(false);
                 }
             }
-        });*/
+        });*//*
+
 
         view.setTag(data);
         return view;
@@ -138,4 +144,4 @@ public class SelectUserAdapter extends BaseAdapter {
         TextView title, phone;
         CheckBox check;
     }
-}
+}*/
