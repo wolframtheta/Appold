@@ -16,46 +16,32 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="1">
+        android:layout_weight="1" >
 
         <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/imageSearch"
-            android:src="@drawable/image1"
+            android:id="@+id/imageClock"
+            android:src="@drawable/clock"
             android:layout_weight="1"
             android:nestedScrollingEnabled="true"
             android:clickable="true" />
 
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageCalls"
-            android:src="@drawable/image1"
-            android:layout_weight="1"
-            android:clickable="true" />
     </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1" >
 
         <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/imagePills"
-            android:src="@drawable/image1"
+            android:id="@+id/imageView3"
+            android:src="@drawable/settings"
             android:layout_weight="1"
             android:clickable="true" />
 
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageZoom"
-            android:src="@drawable/image1"
-            android:layout_weight="1"
-            android:clickable="true" />
     </LinearLayout>
 </LinearLayout>
