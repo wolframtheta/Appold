@@ -1,103 +1,121 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:fitsSystemWindows="true"
+    tools:context="com.example.abhinav.sahaya.Calls.CallsActivity"
+    android:orientation="vertical"
+    android:stretchColumns="0.1"
+    android:background="@color/colorPrimary">
 
-    <FrameLayout
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#5b74a8"
-        android:id="@+id/frag">
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1">
 
-        <TextView
-            android:id="@+id/srchHint"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Contact"
-            android:textSize="16dp"
-            android:textColor="#000"
-            android:layout_gravity="center" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/contact1"
+            android:src="@drawable/image1"
+            android:layout_weight="1"
+            android:nestedScrollingEnabled="true"
+            android:clickable="true"
+            android:text="Añadir"
+            android:background="#004aba"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="35dp" />
 
-        <SearchView
-            android:background="#5b74a8"
-            android:padding="8dp"
-            android:id="@+id/searchView"
-            android:drawableLeft="@android:drawable/ic_menu_search"
-            android:layout_width="wrap_content"
-            android:singleLine="true"
-            android:layout_gravity="right"
-            android:layout_height="wrap_content"></SearchView>
-    </FrameLayout>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/contact2"
+            android:src="@drawable/image1"
+            android:layout_weight="1"
+            android:nestedScrollingEnabled="true"
+            android:clickable="true"
+            android:text="Añadir"
+            android:background="#004aba"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="35dp" />
 
-    <ListView
-        android:layout_below="@+id/frag"
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/contact3"
+            android:src="@drawable/image1"
+            android:layout_weight="1"
+            android:nestedScrollingEnabled="true"
+            android:clickable="true"
+            android:text="Añadir"
+            android:background="#004aba"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="35dp" />
+
+        <Button
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:id="@+id/contacts_list"></ListView>
-
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:layout_width="fill_parent"
-android:layout_height="match_parent"
-android:orientation="vertical">
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:layout_margin="5dp"
-    android:weightSum="3">
-
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:id="@+id/pic"
-         />
+        android:id="@+id/contact4"
+        android:src="@drawable/image1"
+        android:layout_weight="1"
+        android:nestedScrollingEnabled="true"
+        android:clickable="true"
+        android:text="Añadir"
+        android:background="#004aba"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="35dp" />
+    </LinearLayout>
 
     <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_weight="2.6"
-        android:layout_margin="5dp"
-        android:paddingLeft="10dp"
-        android:layout_gravity="center">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/name"
-            android:text="User name"
-            android:textSize="18dp" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/contact5"
+            android:src="@drawable/image1"
+            android:layout_weight="1"
+            android:nestedScrollingEnabled="true"
+            android:clickable="true"
+            android:text="Añadir"
+            android:background="#004aba"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="35dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/no"
-            android:layout_marginTop="10dp"
-            android:text="Phone no."
-            android:textSize="18dp" />
-
+        <Button
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/contact6"
+        android:src="@drawable/image1"
+        android:layout_weight="1"
+        android:nestedScrollingEnabled="true"
+        android:clickable="true"
+        android:text="Añadir"
+        android:background="#004aba"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="35dp" />
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_weight="0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right|center"
-        android:gravity="center"
-        android:visibility="gone"
-        android:orientation="horizontal">
-
-        <CheckBox
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/check" />
-
-    </LinearLayout>
-
 </LinearLayout>
-
-</LinearLayout>
-</RelativeLayout>

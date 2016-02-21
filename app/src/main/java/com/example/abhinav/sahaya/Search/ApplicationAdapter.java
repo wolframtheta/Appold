@@ -1,8 +1,5 @@
 package com.example.abhinav.sahaya.Search;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
@@ -13,10 +10,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.abhinav.sahaya.R;
+
 import org.apache.commons.lang3.StringUtils;
 
-
-import com.example.abhinav.sahaya.R;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
     private List<ApplicationInfo> appsList = null;
