@@ -63,7 +63,7 @@ public class CallsActivity extends Activity implements OnClickListener {
         if (arg0 == btn1) {
 
             try {
-                if (!btn1.getText().equals("Añadir")) {
+                if (!btn1.getText().equals("Add")) {
                     Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + no1));
                     if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                         // TODO: Consider calling
@@ -88,7 +88,7 @@ public class CallsActivity extends Activity implements OnClickListener {
         }
         else if (arg0 == btn2) {
             try {
-                if (!btn2.getText().equals("Añadir")) {
+                if (!btn2.getText().equals("Add")) {
                     Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + no2));
                     if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                         // TODO: Consider calling
@@ -113,7 +113,7 @@ public class CallsActivity extends Activity implements OnClickListener {
         }
         else if (arg0 == btn3) {
             try {
-                if (!btn3.getText().equals("Añadir")) {
+                if (!btn3.getText().equals("Add")) {
                     Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + no3));
                     if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                         // TODO: Consider calling
@@ -138,7 +138,7 @@ public class CallsActivity extends Activity implements OnClickListener {
         }
         else if (arg0 == btn4) {
             try {
-                if (!btn4.getText().equals("Añadir")) {
+                if (!btn4.getText().equals("Add")) {
                     Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + no4));
                     if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                         // TODO: Consider calling
@@ -163,7 +163,7 @@ public class CallsActivity extends Activity implements OnClickListener {
         }
         else if (arg0 == btn5) {
             try {
-                if (!btn5.getText().equals("Añadir")) {
+                if (!btn5.getText().equals("Add")) {
                     Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + no5));
                     if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                         // TODO: Consider calling
@@ -188,7 +188,7 @@ public class CallsActivity extends Activity implements OnClickListener {
         }
         else if (arg0 == btn6) {
             try {
-                if (!btn6.getText().equals("Añadir")) {
+                if (!btn6.getText().equals("Add")) {
                     Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + no6));
                     if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                         // TODO: Consider calling
