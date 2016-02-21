@@ -6,27 +6,116 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.abhinav.sahaya.MainActivity"
+    tools:context="com.example.abhinav.sahaya.Calls.CallsActivity"
     android:orientation="vertical"
     android:stretchColumns="0.1"
     android:background="@color/colorPrimary">
 
     <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_gravity="center_horizontal"
         android:layout_weight="1">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Calls"
-            android:id="@+id/textView"
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/contact1"
+            android:src="@drawable/image1"
+            android:layout_weight="1"
+            android:nestedScrollingEnabled="true"
+            android:clickable="true"
+            android:text="Añadir"
+            android:background="#004aba"
+            android:textColor="#ffffff"
             android:textStyle="bold"
-            android:textSize="70dp"
-            android:layout_weight="0.14"
-            android:layout_gravity="center_vertical"
-            android:textAlignment="center" />
+            android:textSize="35dp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/contact2"
+            android:src="@drawable/image1"
+            android:layout_weight="1"
+            android:nestedScrollingEnabled="true"
+            android:clickable="true"
+            android:text="Añadir"
+            android:background="#004aba"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="35dp" />
+
     </LinearLayout>
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/contact3"
+            android:src="@drawable/image1"
+            android:layout_weight="1"
+            android:nestedScrollingEnabled="true"
+            android:clickable="true"
+            android:text="Añadir"
+            android:background="#004aba"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="35dp" />
+
+        <Button
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/contact4"
+        android:src="@drawable/image1"
+        android:layout_weight="1"
+        android:nestedScrollingEnabled="true"
+        android:clickable="true"
+        android:text="Añadir"
+        android:background="#004aba"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="35dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/contact5"
+            android:src="@drawable/image1"
+            android:layout_weight="1"
+            android:nestedScrollingEnabled="true"
+            android:clickable="true"
+            android:text="Añadir"
+            android:background="#004aba"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="35dp" />
+
+        <Button
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/contact6"
+        android:src="@drawable/image1"
+        android:layout_weight="1"
+        android:nestedScrollingEnabled="true"
+        android:clickable="true"
+        android:text="Añadir"
+        android:background="#004aba"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="35dp" />
+    </LinearLayout>
 </LinearLayout>
