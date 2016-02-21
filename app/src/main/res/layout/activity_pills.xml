@@ -22,7 +22,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/imageClock"
-            android:src="@drawable/clock"
+            android:src="@drawable/reloj"
             android:layout_weight="1"
             android:nestedScrollingEnabled="true"
             android:clickable="true" />
@@ -39,7 +39,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/imageView3"
-            android:src="@drawable/settings"
+            android:src="@drawable/cog"
             android:layout_weight="1"
             android:clickable="true" />
 

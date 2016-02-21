@@ -49,8 +49,8 @@ public class CallsActivity extends Activity implements OnClickListener {
         btn5.setOnClickListener(this);
         btn6.setOnClickListener(this);
 
-        dbHelper = new dbHelper (getApplicationContext());
-        db = dbHelper.getWritableDatabase();
+      //  dbHelper = new dbHelper (getApplicationContext());
+      //  db = dbHelper.getWritableDatabase();
     }
 
 
@@ -58,7 +58,7 @@ public class CallsActivity extends Activity implements OnClickListener {
     @Override
     public void onClick(View arg0) {
         if (arg0 == btn1) {
-            
+
             try {
                 Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
                 startActivityForResult(intent, 1);
