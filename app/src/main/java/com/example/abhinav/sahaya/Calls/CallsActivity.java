@@ -1,17 +1,14 @@
 package com.example.abhinav.sahaya.Calls;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
-import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -31,7 +28,6 @@ public class CallsActivity extends Activity implements OnClickListener {
 
     private DbHelper dbHelper;
     private SQLiteDatabase db;
-    private String no1, no2, no3, no4, no5, no6;
 
 
     @Override
@@ -53,34 +49,19 @@ public class CallsActivity extends Activity implements OnClickListener {
         btn5.setOnClickListener(this);
         btn6.setOnClickListener(this);
 
-        dbHelper = new DbHelper(getApplicationContext());
+        dbHelper = new dbHelper (getApplicationContext());
         db = dbHelper.getWritableDatabase();
     }
+
 
 
     @Override
     public void onClick(View arg0) {
         if (arg0 == btn1) {
-
+            
             try {
-                if (!btn1.getText().equals("Add")) {
-                    Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + no1));
-                    if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                        // TODO: Consider calling
-                        //    ActivityCompat#requestPermissions
-                        // here to request the missing permissions, and then overriding
-                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                        //                                          int[] grantResults)
-                        // to handle the case where the user grants the permission. See the documentation
-                        // for ActivityCompat#requestPermissions for more details.
-                        return;
-                    }
-                    startActivity(intent);
-                }
-                else {
-                    Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
-                    startActivityForResult(intent, 1);
-                }
+                Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
+                startActivityForResult(intent, 1);
             } catch (Exception e) {
                 e.printStackTrace();
                 Log.e("Error in intent : ", e.toString());
@@ -88,24 +69,8 @@ public class CallsActivity extends Activity implements OnClickListener {
         }
         else if (arg0 == btn2) {
             try {
-                if (!btn2.getText().equals("Add")) {
-                    Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + no2));
-                    if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                        // TODO: Consider calling
-                        //    ActivityCompat#requestPermissions
-                        // here to request the missing permissions, and then overriding
-                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                        //                                          int[] grantResults)
-                        // to handle the case where the user grants the permission. See the documentation
-                        // for ActivityCompat#requestPermissions for more details.
-                        return;
-                    }
-                    startActivity(intent);
-                }
-                else {
-                    Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
-                    startActivityForResult(intent, 2);
-                }
+                Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
+                startActivityForResult(intent, 2);
             } catch (Exception e) {
                 e.printStackTrace();
                 Log.e("Error in intent : ", e.toString());
@@ -113,24 +78,8 @@ public class CallsActivity extends Activity implements OnClickListener {
         }
         else if (arg0 == btn3) {
             try {
-                if (!btn3.getText().equals("Add")) {
-                    Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + no3));
-                    if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                        // TODO: Consider calling
-                        //    ActivityCompat#requestPermissions
-                        // here to request the missing permissions, and then overriding
-                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                        //                                          int[] grantResults)
-                        // to handle the case where the user grants the permission. See the documentation
-                        // for ActivityCompat#requestPermissions for more details.
-                        return;
-                    }
-                    startActivity(intent);
-                }
-                else {
-                    Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
-                    startActivityForResult(intent, 3);
-                }
+                Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
+                startActivityForResult(intent, 3);
             } catch (Exception e) {
                 e.printStackTrace();
                 Log.e("Error in intent : ", e.toString());
@@ -138,24 +87,8 @@ public class CallsActivity extends Activity implements OnClickListener {
         }
         else if (arg0 == btn4) {
             try {
-                if (!btn4.getText().equals("Add")) {
-                    Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + no4));
-                    if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                        // TODO: Consider calling
-                        //    ActivityCompat#requestPermissions
-                        // here to request the missing permissions, and then overriding
-                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                        //                                          int[] grantResults)
-                        // to handle the case where the user grants the permission. See the documentation
-                        // for ActivityCompat#requestPermissions for more details.
-                        return;
-                    }
-                    startActivity(intent);
-                }
-                else {
-                    Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
-                    startActivityForResult(intent, 4);
-                }
+                Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
+                startActivityForResult(intent, 4);
             } catch (Exception e) {
                 e.printStackTrace();
                 Log.e("Error in intent : ", e.toString());
@@ -163,24 +96,8 @@ public class CallsActivity extends Activity implements OnClickListener {
         }
         else if (arg0 == btn5) {
             try {
-                if (!btn5.getText().equals("Add")) {
-                    Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + no5));
-                    if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                        // TODO: Consider calling
-                        //    ActivityCompat#requestPermissions
-                        // here to request the missing permissions, and then overriding
-                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                        //                                          int[] grantResults)
-                        // to handle the case where the user grants the permission. See the documentation
-                        // for ActivityCompat#requestPermissions for more details.
-                        return;
-                    }
-                    startActivity(intent);
-                }
-                else {
-                    Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
-                    startActivityForResult(intent, 5);
-                }
+                Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
+                startActivityForResult(intent, 5);
             } catch (Exception e) {
                 e.printStackTrace();
                 Log.e("Error in intent : ", e.toString());
@@ -188,24 +105,8 @@ public class CallsActivity extends Activity implements OnClickListener {
         }
         else if (arg0 == btn6) {
             try {
-                if (!btn6.getText().equals("Add")) {
-                    Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + no6));
-                    if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                        // TODO: Consider calling
-                        //    ActivityCompat#requestPermissions
-                        // here to request the missing permissions, and then overriding
-                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                        //                                          int[] grantResults)
-                        // to handle the case where the user grants the permission. See the documentation
-                        // for ActivityCompat#requestPermissions for more details.
-                        return;
-                    }
-                    startActivity(intent);
-                }
-                else {
-                    Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
-                    startActivityForResult(intent, 6);
-                }
+                Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
+                startActivityForResult(intent, 6);
             } catch (Exception e) {
                 e.printStackTrace();
                 Log.e("Error in intent : ", e.toString());
@@ -238,30 +139,12 @@ public class CallsActivity extends Activity implements OnClickListener {
                     }
 
                     Log.e("Phone no & name :***: ", name + " : " + no);
-                    if(reqCode==1) {
-                        no1 = no;
-                        btn1.setText(name + " : " + no1 + "\n");
-                    }
-                    else if (reqCode==2) {
-                        no2 = no;
-                        btn2.setText(name + " : " + no2 + "\n");
-                    }
-                    else if (reqCode==3) {
-                        no3 = no;
-                        btn3.setText(name + " : " + no3 + "\n");
-                    }
-                    else if (reqCode==4) {
-                        no4 = no;
-                        btn4.setText(name + " : " + no4 + "\n");
-                    }
-                    else if (reqCode==5) {
-                        no5 = no;
-                        btn5.setText(name + " : " + no5 + "\n");
-                    }
-                    else if (reqCode==6) {
-                        no6 = no;
-                        btn6.setText(name + " : " + no6 + "\n");
-                    }
+                    if(reqCode==1) btn1.setText(name + " : " + no + "\n");
+                    else if (reqCode==2) btn2.setText(name + " : " + no + "\n");
+                    else if (reqCode==3) btn3.setText(name + " : " + no + "\n");
+                    else if (reqCode==4) btn4.setText(name + " : " + no + "\n");
+                    else if (reqCode==5) btn5.setText(name + " : " + no + "\n");
+                    else if (reqCode==6) btn6.setText(name + " : " + no + "\n");
 
                     id = null;
                     name = null;

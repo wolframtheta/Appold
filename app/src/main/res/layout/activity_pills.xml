@@ -38,11 +38,10 @@
         <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/imageSettings"
+            android:id="@+id/imageView3"
             android:src="@drawable/settings"
             android:layout_weight="1"
-            android:clickable="true"
-            android:longClickable="false" />
+            android:clickable="true" />
 
     </LinearLayout>
 </LinearLayout>
