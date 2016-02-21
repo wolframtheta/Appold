@@ -5,5 +5,7 @@ package com.example.abhinav.sahaya;
  */
 public class Constants {
 
-    public static String TABLE_NAME = "pills";
+    public static String TABLE_PILLS = "pills";
+    public static String DB_NAME = "sahaya";
+    public static Integer DB_VERSION = 1;
 }

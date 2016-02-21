@@ -21,6 +21,17 @@ public class PillsMainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), PillsDayActivity.class);
+
+                startActivity(intent);
+
+            }
+        });
+
+        ImageView imageSettings = (ImageView) findViewById(R.id.imageSettings);
+        imageSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), PillsSettingsActivity.class);
                 startActivity(intent);
             }
         });
