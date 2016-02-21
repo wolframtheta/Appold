@@ -2,67 +2,81 @@
 <items version="2" >
 
     <item
-        jar="/Users/lluis/Documents/HACKUPC/new/Sahaya/app/build/intermediates/exploded-aar/github.yaa110.db/restorablesqlitedatabase/0.1.0/jars/classes.jar"
+        jar="D:\Xavier_2\Sahaya\app\build\intermediates\exploded-aar\com.github.tittojose\timerangepicker-library\0.2\jars\classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="e83c9dc02bf7c942194968c78efcd91b419bb4cb">
-        <dex dex="/Users/lluis/Documents/HACKUPC/new/Sahaya/app/build/intermediates/pre-dexed/debug/github.yaa110.db-restorablesqlitedatabase-0.1.0_63d73b95f8361a9850dd92c020b425ce87aee9f1.jar" />
+        sha1="c56a9426973c9e4896d1f4680457a1c5fca24117">
+        <dex dex="D:\Xavier_2\Sahaya\app\build\intermediates\pre-dexed\debug\com.github.tittojose-timerangepicker-library-0.2_25ea09e12a8328ccdaf2d8ef6362eaae1dbdb6a5.jar" />
     </item>
     <item
-        jar="/private/var/root/.gradle/caches/modules-2/files-2.1/com.github.jsqlparser/jsqlparser/0.9.2/c3319d039ca68c3406777c034e8fa33536f4033d/jsqlparser-0.9.2.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="c3319d039ca68c3406777c034e8fa33536f4033d">
-        <dex dex="/Users/lluis/Documents/HACKUPC/new/Sahaya/app/build/intermediates/pre-dexed/debug/jsqlparser-0.9.2_3aedd350a4bcc89698796eb9ed6581049b4d7023.jar" />
-    </item>
-    <item
-        jar="/Users/lluis/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
-        <dex dex="/Users/lluis/Documents/HACKUPC/new/Sahaya/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1_4d15730011ce7d4b703a3c3f77c9a51336fe3551.jar" />
-    </item>
-    <item
-        jar="/Users/lluis/Documents/HACKUPC/new/Sahaya/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
-        <dex dex="/Users/lluis/Documents/HACKUPC/new/Sahaya/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.1.1_839d00ae7a5d1b876919217b125cb19a73b917d8.jar" />
-    </item>
-    <item
-        jar="/private/var/root/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.4/5fe28b9518e58819180a43a850fbc0dd24b7c050/commons-lang3-3.4.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="5fe28b9518e58819180a43a850fbc0dd24b7c050">
-        <dex dex="/Users/lluis/Documents/HACKUPC/new/Sahaya/app/build/intermediates/pre-dexed/debug/commons-lang3-3.4_da06419cfdea4d3bbb52ee18d28c0c431a6ae0bb.jar" />
-    </item>
-    <item
-        jar="/Users/lluis/Documents/HACKUPC/new/Sahaya/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="/Users/lluis/Documents/HACKUPC/new/Sahaya/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1_d193393a6f39d2fdb66c6030418f67c7694c2b1b.jar" />
-    </item>
-    <item
-        jar="/Users/lluis/Documents/HACKUPC/new/Sahaya/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
+        jar="D:\Xavier_2\Sahaya\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.2"
         sha1="5c5699834e9722f1c288fea2de82725d078ba127">
-        <dex dex="/Users/lluis/Documents/HACKUPC/new/Sahaya/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.1.1_2d0d349581c0e7e0989745c75c0508b0efc8ddd3.jar" />
+        <dex dex="D:\Xavier_2\Sahaya\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.1.1_252f73ce8c56e4b08dd95e609290af4730f1d4f5.jar" />
     </item>
     <item
-        jar="/Users/lluis/Documents/HACKUPC/new/Sahaya/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/jars/classes.jar"
+        jar="C:\Users\Xavier_2\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.4\5fe28b9518e58819180a43a850fbc0dd24b7c050\commons-lang3-3.4.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5fe28b9518e58819180a43a850fbc0dd24b7c050">
+        <dex dex="D:\Xavier_2\Sahaya\app\build\intermediates\pre-dexed\debug\commons-lang3-3.4_7452fae7ed1201612b9aa461c8e8bd43e55c9973.jar" />
+    </item>
+    <item
+        jar="D:\Xavier_2\Sahaya\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="D:\Xavier_2\Sahaya\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.1.1_e576a48935c8d7cfe01fca0b7da687a727de3a99.jar" />
+    </item>
+    <item
+        jar="C:\Users\Xavier_2\.gradle\caches\modules-2\files-2.1\com.github.jsqlparser\jsqlparser\0.9.2\c3319d039ca68c3406777c034e8fa33536f4033d\jsqlparser-0.9.2.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="c3319d039ca68c3406777c034e8fa33536f4033d">
+        <dex dex="D:\Xavier_2\Sahaya\app\build\intermediates\pre-dexed\debug\jsqlparser-0.9.2_b503db3805a3a55761ff8c06f7a864ce1f13a0f5.jar" />
+    </item>
+    <item
+        jar="D:\Xavier_2\Sahaya\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.2"
         sha1="379471b2bd17d9737c050345c08e8c7d16589784">
-        <dex dex="/Users/lluis/Documents/HACKUPC/new/Sahaya/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.1.1_66bb9f2696770e842ff9e2c80f671433742ab42b.jar" />
+        <dex dex="D:\Xavier_2\Sahaya\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.1.1_bbf96fec333004d0af7d5f7ab6f8fade33748609.jar" />
     </item>
     <item
-        jar="/Users/lluis/Documents/HACKUPC/new/Sahaya/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
+        jar="D:\Xavier_2\Sahaya\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.2"
         sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="/Users/lluis/Documents/HACKUPC/new/Sahaya/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.1.1_7c42078a2692092bafbdad081ea970fa591aeee8.jar" />
+        <dex dex="D:\Xavier_2\Sahaya\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.1.1_5cd4727a184979a9e7fa3d81711e64c96888880c.jar" />
+    </item>
+    <item
+        jar="D:\Xavier_2\Sahaya\app\build\intermediates\exploded-aar\github.yaa110.db\restorablesqlitedatabase\0.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e83c9dc02bf7c942194968c78efcd91b419bb4cb">
+        <dex dex="D:\Xavier_2\Sahaya\app\build\intermediates\pre-dexed\debug\github.yaa110.db-restorablesqlitedatabase-0.1.0_c20d7191e0dd4b6b99afd41c985b5ef171d92468.jar" />
+    </item>
+    <item
+        jar="D:\Xavier_2\Sahaya\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="D:\Xavier_2\Sahaya\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1_72bfd3a2d6954c3cf01d18ba988aafab5439e297.jar" />
+    </item>
+    <item
+        jar="C:\Users\Xavier_2\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="D:\Xavier_2\Sahaya\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1_2437a70709fe0b5097fd96bb817ef785a7b9ea89.jar" />
+    </item>
+    <item
+        jar="D:\Xavier_2\Sahaya\app\build\intermediates\exploded-aar\com.wdullaer\materialdatetimepicker\2.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8a0cab6c96fb94a28534e7d20be3f08f880dee00">
+        <dex dex="D:\Xavier_2\Sahaya\app\build\intermediates\pre-dexed\debug\com.wdullaer-materialdatetimepicker-2.2.0_ac4863ce077e90e2ce66535f7bc60ba3820a4034.jar" />
     </item>
 
 </items>
