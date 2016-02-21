@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
         ImageView imageSearch = (ImageView) findViewById(R.id.imageSearch);
         imageSearch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("outputY", 150);
         startActivityForResult(intent, 0);
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

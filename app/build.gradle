@@ -17,6 +17,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    repositories {
+        jcenter()
+    }
+
+
+
+
+
 }
 
 dependencies {
@@ -25,5 +33,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:design:23.1.1'
     compile 'github.yaa110.db:restorablesqlitedatabase:0.1.0'
+    compile 'com.github.tittojose:timerangepicker-library:0.2'
+    compile 'com.wdullaer:materialdatetimepicker:2.2.0'
     compile 'org.apache.commons:commons-lang3:3.4'
 }
