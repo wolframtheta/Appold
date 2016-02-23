@@ -27,7 +27,7 @@
             android:nestedScrollingEnabled="true"
             android:clickable="true"
             android:text="Add"
-            android:background="#5882FA"
+            android:background="#303f9f"
             android:textColor="#ffffff"
             android:textStyle="bold"
             android:textSize="35dp" />
@@ -41,7 +41,7 @@
             android:nestedScrollingEnabled="true"
             android:clickable="true"
             android:text="Add"
-            android:background="#5882FA"
+            android:background="#1976d2"
             android:textColor="#ffffff"
             android:textStyle="bold"
             android:textSize="35dp" />
@@ -64,7 +64,7 @@
             android:nestedScrollingEnabled="true"
             android:clickable="true"
             android:text="Add"
-            android:background="#5882FA"
+            android:background="#F57C00"
             android:textColor="#ffffff"
             android:textStyle="bold"
             android:textSize="35dp" />
@@ -78,7 +78,7 @@
         android:nestedScrollingEnabled="true"
         android:clickable="true"
         android:text="Add"
-        android:background="#5882FA"
+        android:background="#00796B"
         android:textColor="#ffffff"
         android:textStyle="bold"
         android:textSize="35dp" />
@@ -99,7 +99,7 @@
             android:nestedScrollingEnabled="true"
             android:clickable="true"
             android:text="Add"
-            android:background="#5882FA"
+            android:background="#00BFA5"
             android:textColor="#ffffff"
             android:textStyle="bold"
             android:textSize="35dp" />
@@ -113,7 +113,7 @@
         android:nestedScrollingEnabled="true"
         android:clickable="true"
         android:text="Add"
-        android:background="#5882FA"
+        android:background="#AFB42B"
         android:textColor="#ffffff"
         android:textStyle="bold"
         android:textSize="35dp" />
