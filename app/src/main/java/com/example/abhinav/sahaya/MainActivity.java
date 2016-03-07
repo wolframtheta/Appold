@@ -12,6 +12,7 @@ import com.example.abhinav.sahaya.Search.SearchActivity;
 
 public class MainActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -2,7 +2,6 @@ package com.example.abhinav.sahaya.Pills;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -36,6 +35,7 @@ public class PillNewActivity extends AppCompatActivity implements View.OnFocusCh
     private Time time;
     private int mYear, mMonth, mDay, mYear2, mMonth2, mDay2;
     private int mHour, mMinute;
+    private EditText nameText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +45,8 @@ public class PillNewActivity extends AppCompatActivity implements View.OnFocusCh
         dbHelper = new DbHelper(getApplicationContext());
         db = dbHelper.getWritableDatabase();
 
+
+        nameText = (EditText) findViewById(R.id.nameText);
         dateTextFrom = (EditText) findViewById(R.id.dateTextFrom);
         dateTextTo = (EditText) findViewById(R.id.dateTextTo);
         startDate = new Date(0,0,0);
@@ -78,7 +80,7 @@ public class PillNewActivity extends AppCompatActivity implements View.OnFocusCh
                 time.setHour(mHour);
                 time.setMinute(mMinute);
 
-                    String query = "INSERT INTO " + Constants.TABLE_PILLS + " VALUES('1','" + time.getHour() + "', '" + time.getMinute() + "', '" + startDate.getDay() + "', '" + startDate.getMonth() + "', " +
+                    String query = "INSERT INTO " + Constants.TABLE_PILLS + " (name, hour, minute, day_start, month_start, year_start, day_end, month_end, year_end) VALUES('" + nameText.getText() + "', '"  + time.getHour() + "', '" + time.getMinute() + "', '" + startDate.getDay() + "', '" + startDate.getMonth() + "', " +
                             "'" + startDate.getYear() + "', '" + endDate.getDay() + "', '" + endDate.getMonth() + "', '" + endDate.getYear() + "')";
 
                     db.execSQL(query);

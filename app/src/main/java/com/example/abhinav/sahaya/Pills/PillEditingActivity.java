@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
@@ -22,6 +21,8 @@ public class PillEditingActivity extends AppCompatActivity {
     private SQLiteDatabase db;
     private Cursor c;
     private Bundle extras;
+    private TextView textName;
+    private String query;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -29,11 +30,11 @@ public class PillEditingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pill_editing);
 
 
-       dbHelper = new DbHelper(getApplicationContext());
+        dbHelper = new DbHelper(getApplicationContext());
         db = dbHelper.getWritableDatabase();
 
-    String query = "";
-        TextView textName = (TextView) findViewById(R.id.textName);
+        query = "";
+        textName = (TextView) findViewById(R.id.textName);
         extras = getIntent().getExtras();
         if (extras != null) query = "SELECT * FROM " + Constants.TABLE_PILLS + " WHERE pillID = '" + extras.getInt("ID") + "'";
 
@@ -55,8 +56,27 @@ public class PillEditingActivity extends AppCompatActivity {
         imageDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Delete
+                query = "DELETE * FROM " + Constants.TABLE_PILLS + " WHERE pillID = '" + extras.getInt("ID") + "'";
+                db.execSQL(query);
+                finish();
             }
         });
+    }
+
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        dbHelper = new DbHelper(getApplicationContext());
+        db = dbHelper.getWritableDatabase();
+
+        String query = "";
+        textName = (TextView) findViewById(R.id.textName);
+        extras = getIntent().getExtras();
+        if (extras != null) query = "SELECT * FROM " + Constants.TABLE_PILLS + " WHERE pillID = '" + extras.getInt("ID") + "'";
+
+        c = db.rawQuery(query, null);
+        c.moveToNext();
+        textName.setText(dbHelper.getName(c));
     }
 }

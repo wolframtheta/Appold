@@ -6,6 +6,7 @@ package com.example.abhinav.sahaya;
 public class Constants {
 
     public static String TABLE_PILLS = "pills";
-    public static String DB_NAME = "sahaya";
+    public static String TABLE_CALL_NUMBERS = "call_numbers";
+    public static String DB_NAME = "appold";
     public static Integer DB_VERSION = 1;
 }

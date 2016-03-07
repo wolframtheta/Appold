@@ -2,14 +2,12 @@ package com.example.abhinav.sahaya.Pills;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
-import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -20,8 +18,6 @@ import com.example.abhinav.sahaya.Date;
 import com.example.abhinav.sahaya.DbHelper;
 import com.example.abhinav.sahaya.R;
 import com.example.abhinav.sahaya.Time;
-
-import java.util.Calendar;
 
 /**
  * Created by Xavier Marquès on 20/02/16.
@@ -37,7 +33,7 @@ public class PillEditTimeActivity extends AppCompatActivity implements View.OnCl
     private Date startDate;
     private Date endDate;
     private Time time;
-
+    private EditText nameText;
 
 
     @Override
@@ -48,7 +44,7 @@ public class PillEditTimeActivity extends AppCompatActivity implements View.OnCl
         dbHelper = new DbHelper(getApplicationContext());
         db = dbHelper.getWritableDatabase();
         extras = getIntent().getExtras();
-        EditText nameText = (EditText) findViewById(R.id.nameText);
+        nameText = (EditText) findViewById(R.id.nameText);
         Cursor c = db.rawQuery("SELECT * FROM " + Constants.TABLE_PILLS + " WHERE pillID = '" + extras.getInt("ID") + "'", null);
         c.moveToNext();
         nameText.setText(dbHelper.getName(c));
@@ -80,7 +76,7 @@ public class PillEditTimeActivity extends AppCompatActivity implements View.OnCl
             @Override
             public void onClick(View v) {
                 if (extras != null) {
-                    String query = "UPDATE " + Constants.TABLE_PILLS + " SET day_start = '" + startDate.getDay() + "', month_start = '" + startDate.getMonth() + "', " +
+                    String query = "UPDATE " + Constants.TABLE_PILLS + " SET name = '" + nameText.getText() + "', day_start = '" + startDate.getDay() + "', month_start = '" + startDate.getMonth() + "', " +
                             " year_start = '" + startDate.getYear() + "', day_end = '" + endDate.getDay() + "', month_end = '" + endDate.getMonth() + "', year_end = '" +
                             endDate.getYear() + "', hour = '" + time.getHour() + "', minute = '" + time.getMinute() + "' WHERE pillID = '" + extras.getInt("ID") + "'";
 

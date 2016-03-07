@@ -5,28 +5,21 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.example.abhinav.sahaya.Constants;
-import com.example.abhinav.sahaya.Date;
 import com.example.abhinav.sahaya.DbHelper;
-import com.example.abhinav.sahaya.ListViewerAdapter;
 import com.example.abhinav.sahaya.R;
-import com.example.abhinav.sahaya.Time;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class PillsSettingsActivity extends AppCompatActivity {
 
     private DbHelper dbHelper;
     private SQLiteDatabase db;
+    private ListView listPillsSettings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,17 +31,16 @@ public class PillsSettingsActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), PillNewActivity.class);
                 startActivity(intent);
-                refresh();
             }
         });
 
-        final ListView listPillsSettings = (ListView) findViewById(R.id.listPillsSetting);
+        listPillsSettings = (ListView) findViewById(R.id.listPillsSetting);
 
 
         dbHelper = new DbHelper(getApplicationContext());
         db = dbHelper.getWritableDatabase();
 
-        String query = "SELECT name FROM " + Constants.TABLE_PILLS;
+        String query = "SELECT name FROM " + Constants.TABLE_PILLS + " ORDER BY name ASC";
 
         Cursor c = db.rawQuery(query, null);
         String[] list = new String[c.getCount()];
@@ -79,14 +71,14 @@ public class PillsSettingsActivity extends AppCompatActivity {
         });
     }
 
-    public void refresh() {
-        final ListView listPillsSettings = (ListView) findViewById(R.id.listPillsSetting);
-
+    @Override
+    protected void onRestart() {
+        super.onRestart();
 
         dbHelper = new DbHelper(getApplicationContext());
         db = dbHelper.getWritableDatabase();
 
-        String query = "SELECT name FROM " + Constants.TABLE_PILLS;
+        String query = "SELECT name FROM " + Constants.TABLE_PILLS + " ORDER BY name ASC";
 
         Cursor c = db.rawQuery(query, null);
         String[] list = new String[c.getCount()];
@@ -115,7 +107,6 @@ public class PillsSettingsActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
-
-
 }

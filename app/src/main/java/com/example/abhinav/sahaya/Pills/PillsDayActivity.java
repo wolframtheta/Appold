@@ -18,9 +18,6 @@ import com.example.abhinav.sahaya.ListViewerAdapter;
 import com.example.abhinav.sahaya.R;
 import com.example.abhinav.sahaya.Time;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 public class PillsDayActivity extends AppCompatActivity {
 
     DbHelper dbHelper;
@@ -95,6 +92,7 @@ public class PillsDayActivity extends AppCompatActivity {
                     listPillsAfternoon.addPill(pill);
                 else
                     listPillsNight.addPill(pill);
+
             }
 
 

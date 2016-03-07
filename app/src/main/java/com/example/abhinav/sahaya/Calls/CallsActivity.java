@@ -5,6 +5,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -17,10 +18,11 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
+import com.example.abhinav.sahaya.Constants;
 import com.example.abhinav.sahaya.DbHelper;
 import com.example.abhinav.sahaya.R;
 
-public class CallsActivity extends Activity implements OnClickListener {
+public class CallsActivity extends Activity implements OnClickListener, View.OnLongClickListener {
 
     private Button btn1 = null;
     private Button btn2 = null;
@@ -32,6 +34,8 @@ public class CallsActivity extends Activity implements OnClickListener {
     private DbHelper dbHelper;
     private SQLiteDatabase db;
     private String no1, no2, no3, no4, no5, no6;
+    private SharedPreferences prefs;
+    private Cursor c;
 
 
     @Override
@@ -52,27 +56,152 @@ public class CallsActivity extends Activity implements OnClickListener {
         btn4.setOnClickListener(this);
         btn5.setOnClickListener(this);
         btn6.setOnClickListener(this);
+        btn1.setLongClickable(true);
+        btn2.setLongClickable(true);
+        btn3.setLongClickable(true);
+        btn4.setLongClickable(true);
+        btn5.setLongClickable(true);
+        btn6.setLongClickable(true);
+        btn1.setOnLongClickListener(this);
+
+        btn2.setOnLongClickListener(this);
+        btn3.setOnLongClickListener(this);
+        btn4.setOnLongClickListener(this);
+        btn5.setOnLongClickListener(this);
+        btn6.setOnLongClickListener(this);
+
 
         dbHelper = new DbHelper(getApplicationContext());
         db = dbHelper.getWritableDatabase();
+        for (int i = 0; i < 6; ++i) {
+            String query = "SELECT * FROM " + Constants.TABLE_CALL_NUMBERS + " WHERE idCall ='" + i + "'";
+            Cursor c = db.rawQuery(query, null);
+            c.moveToNext();
+            switch (i) {
+                case 0:
+                    if (c.getCount() > 0){
+                        btn1.setText(dbHelper.getCallName(c));
+                        no1 = dbHelper.getCallNumber(c);
+                    }
+                    else {
+                        db.execSQL("INSERT INTO " + Constants.TABLE_CALL_NUMBERS + " VALUES (0,'','')");
+                        btn1.setText("Add");
+                    }
+                    break;
+                case 1:
+                    if (c.getCount() > 0){
+                        btn2.setText(dbHelper.getCallName(c));
+                        no2 = dbHelper.getCallNumber(c);
+                    }
+                    else {
+                        db.execSQL("INSERT INTO " + Constants.TABLE_CALL_NUMBERS + " VALUES (1,'','')");
+                        btn2.setText("Add");
+                    }
+                    break;
+                case 2:
+                    if (c.getCount() > 0){
+                        btn3.setText(dbHelper.getCallName(c));
+                        no3 = dbHelper.getCallNumber(c);
+                    }
+                    else {
+                        db.execSQL("INSERT INTO " + Constants.TABLE_CALL_NUMBERS + " VALUES (2,'','')");
+                        btn3.setText("Add");
+                    }
+                    break;
+                case 3:
+                    if (c.getCount() > 0) {
+                        btn4.setText(dbHelper.getCallName(c));
+                        no4 = dbHelper.getCallNumber(c);
+                    }
+                    else {
+                        db.execSQL("INSERT INTO " + Constants.TABLE_CALL_NUMBERS + " VALUES (3,'','')");
+                        btn4.setText("Add");
+                    }
+                    break;
+                case 4:
+                    if (c.getCount() > 0){
+                        btn5.setText(dbHelper.getCallName(c));
+                        no5 = dbHelper.getCallNumber(c);
+                    }
+                    else {
+                        db.execSQL("INSERT INTO " + Constants.TABLE_CALL_NUMBERS + " VALUES (4,'','')");
+                        btn5.setText("Add");
+                    }
+                    break;
+                case 5:
+                    if (c.getCount() > 0){
+                        btn6.setText(dbHelper.getCallName(c));
+                        no6 = dbHelper.getCallNumber(c);
+                    }
+                    else {
+                        db.execSQL("INSERT INTO " + Constants.TABLE_CALL_NUMBERS + " VALUES (5,'','')");
+                        btn6.setText("Add");
+                    }
+                    break;
+
+            }
+        }
+
     }
 
+    @Override
+    public boolean onLongClick(View v) {
+        String query;
+        if (v == btn1) {
+            if (!btn1.getText().equals("Add")){
+                btn1.setText("Add");
+                query = "DELETE FROM " + Constants.TABLE_CALL_NUMBERS + " WHERE idCall = 0";
+                db.execSQL(query);
+
+            }
+        }
+        else if (v == btn2) {
+            if (!btn2.getText().equals("Add")){
+                btn2.setText("Add");
+                query = "DELETE FROM " + Constants.TABLE_CALL_NUMBERS + " WHERE idCall = 1";
+                db.execSQL(query);
+            }
+        }
+        else if (v == btn3) {
+            if (!btn3.getText().equals("Add")){
+                btn3.setText("Add");
+                query = "DELETE FROM " + Constants.TABLE_CALL_NUMBERS + " WHERE idCall = 2";
+                db.execSQL(query);
+            }
+        }
+        else if (v == btn4) {
+            if (!btn4.getText().equals("Add")){
+                btn4.setText("Add");
+                query = "DELETE FROM " + Constants.TABLE_CALL_NUMBERS + " WHERE idCall = 3";
+                db.execSQL(query);
+            }
+        }
+        else if (v == btn5) {
+            if (!btn5.getText().equals("Add")){
+                btn5.setText("Add");
+                query = "DELETE FROM " + Constants.TABLE_CALL_NUMBERS + " WHERE idCall = 4";
+                db.execSQL(query);
+            }
+        }
+        else if (v == btn6) {
+            if (!btn6.getText().equals("Add")){
+                btn6.setText("Add");
+                query = "DELETE FROM " + Constants.TABLE_CALL_NUMBERS + " WHERE idCall = 5";
+                db.execSQL(query);
+            }
+        }
+
+        return false;
+
+    }
 
     @Override
     public void onClick(View arg0) {
         if (arg0 == btn1) {
-
             try {
                 if (!btn1.getText().equals("Add")) {
                     Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + no1));
                     if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                        // TODO: Consider calling
-                        //    ActivityCompat#requestPermissions
-                        // here to request the missing permissions, and then overriding
-                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                        //                                          int[] grantResults)
-                        // to handle the case where the user grants the permission. See the documentation
-                        // for ActivityCompat#requestPermissions for more details.
                         return;
                     }
                     startActivity(intent);
@@ -91,13 +220,6 @@ public class CallsActivity extends Activity implements OnClickListener {
                 if (!btn2.getText().equals("Add")) {
                     Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + no2));
                     if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                        // TODO: Consider calling
-                        //    ActivityCompat#requestPermissions
-                        // here to request the missing permissions, and then overriding
-                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                        //                                          int[] grantResults)
-                        // to handle the case where the user grants the permission. See the documentation
-                        // for ActivityCompat#requestPermissions for more details.
                         return;
                     }
                     startActivity(intent);
@@ -116,13 +238,6 @@ public class CallsActivity extends Activity implements OnClickListener {
                 if (!btn3.getText().equals("Add")) {
                     Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + no3));
                     if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                        // TODO: Consider calling
-                        //    ActivityCompat#requestPermissions
-                        // here to request the missing permissions, and then overriding
-                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                        //                                          int[] grantResults)
-                        // to handle the case where the user grants the permission. See the documentation
-                        // for ActivityCompat#requestPermissions for more details.
                         return;
                     }
                     startActivity(intent);
@@ -141,13 +256,6 @@ public class CallsActivity extends Activity implements OnClickListener {
                 if (!btn4.getText().equals("Add")) {
                     Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + no4));
                     if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                        // TODO: Consider calling
-                        //    ActivityCompat#requestPermissions
-                        // here to request the missing permissions, and then overriding
-                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                        //                                          int[] grantResults)
-                        // to handle the case where the user grants the permission. See the documentation
-                        // for ActivityCompat#requestPermissions for more details.
                         return;
                     }
                     startActivity(intent);
@@ -166,13 +274,6 @@ public class CallsActivity extends Activity implements OnClickListener {
                 if (!btn5.getText().equals("Add")) {
                     Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + no5));
                     if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                        // TODO: Consider calling
-                        //    ActivityCompat#requestPermissions
-                        // here to request the missing permissions, and then overriding
-                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                        //                                          int[] grantResults)
-                        // to handle the case where the user grants the permission. See the documentation
-                        // for ActivityCompat#requestPermissions for more details.
                         return;
                     }
                     startActivity(intent);
@@ -191,13 +292,6 @@ public class CallsActivity extends Activity implements OnClickListener {
                 if (!btn6.getText().equals("Add")) {
                     Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + no6));
                     if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                        // TODO: Consider calling
-                        //    ActivityCompat#requestPermissions
-                        // here to request the missing permissions, and then overriding
-                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                        //                                          int[] grantResults)
-                        // to handle the case where the user grants the permission. See the documentation
-                        // for ActivityCompat#requestPermissions for more details.
                         return;
                     }
                     startActivity(intent);
@@ -237,40 +331,103 @@ public class CallsActivity extends Activity implements OnClickListener {
                         no = phoneCur.getString(phoneCur.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
                     }
 
+
+                    dbHelper = new DbHelper(getApplicationContext());
+                    db = dbHelper.getWritableDatabase();
+                    String query = "";
+
+
                     Log.e("Phone no & name :***: ", name + " : " + no);
                     if(reqCode==1) {
                         no1 = no;
-                        btn1.setText(name + " : " + no1 + "\n");
+                        btn1.setText(name);
+                        query = "SELECT * FROM " + Constants.TABLE_CALL_NUMBERS + " WHERE idCall = 0";
+                        c = db.rawQuery(query, null);
+                        if (c.moveToNext()) {
+                            query = "UPDATE " + Constants.TABLE_CALL_NUMBERS + " SET name = '" + name + "', number = '" + no1 + "' WHERE idCall = 0";
+                            db.execSQL(query);
+                        }
+                        else {
+                            query = "INSERT INTO " + Constants.TABLE_CALL_NUMBERS + " VALUES ('0', '" + name + "', '" + no1 + "');";
+                            db.execSQL(query);
+                        }
+
                     }
                     else if (reqCode==2) {
                         no2 = no;
-                        btn2.setText(name + " : " + no2 + "\n");
+                        btn2.setText(name);
+                        query = "SELECT * FROM " + Constants.TABLE_CALL_NUMBERS + " WHERE idCall = 1";
+                        c = db.rawQuery(query, null);
+                        if (c.moveToNext()) {
+                            query = "UPDATE " + Constants.TABLE_CALL_NUMBERS + " SET name = '" + name + "', number = '" + no2 + "' WHERE idCall = 1";
+                            db.execSQL(query);
+                        }
+                        else {
+                            query = "INSERT INTO " + Constants.TABLE_CALL_NUMBERS + " VALUES ('1', '" + name + "', '" + no2 + "');";
+                            db.execSQL(query);
+                        }
+
                     }
                     else if (reqCode==3) {
                         no3 = no;
-                        btn3.setText(name + " : " + no3 + "\n");
+                        btn3.setText(name);
+                        query = "SELECT * FROM " + Constants.TABLE_CALL_NUMBERS + " WHERE idCall = 2";
+                        c = db.rawQuery(query, null);
+                        if (c.moveToNext()) {
+                            query = "UPDATE " + Constants.TABLE_CALL_NUMBERS + " SET name = '" + name + "', number = '" + no3 + "' WHERE idCall = 2";
+                            db.execSQL(query);
+                        }
+                        else {
+                            query = "INSERT INTO " + Constants.TABLE_CALL_NUMBERS + " VALUES ('2', '" + name + "', '" + no3 + "');";
+                            db.execSQL(query);
+                        }
                     }
                     else if (reqCode==4) {
                         no4 = no;
-                        btn4.setText(name + " : " + no4 + "\n");
+                        btn4.setText(name);
+                        query = "SELECT * FROM " + Constants.TABLE_CALL_NUMBERS + " WHERE idCall = 3";
+                        c = db.rawQuery(query, null);
+                        if (c.moveToNext()) {
+                            query = "UPDATE " + Constants.TABLE_CALL_NUMBERS + " SET name = '" + name + "', number = '" + no4 + "' WHERE idCall = 3";
+                            db.execSQL(query);
+                        }
+                        else {
+                            query = "INSERT INTO " + Constants.TABLE_CALL_NUMBERS + " VALUES ('3', '" + name + "', '" + no4 + "');";
+                            db.execSQL(query);
+                        }
                     }
                     else if (reqCode==5) {
                         no5 = no;
-                        btn5.setText(name + " : " + no5 + "\n");
+                        btn5.setText(name);
+                        query = "SELECT * FROM " + Constants.TABLE_CALL_NUMBERS + " WHERE idCall = 4";
+                        c = db.rawQuery(query, null);
+                        if (c.moveToNext()) {
+                            query = "UPDATE " + Constants.TABLE_CALL_NUMBERS + " SET name = '" + name + "', number = '" + no5 + "' WHERE idCall = 4";
+                            db.execSQL(query);
+                        }
+                        else {
+                            query = "INSERT INTO " + Constants.TABLE_CALL_NUMBERS + " VALUES ('4', '" + name + "', '" + no5 + "');";
+                            db.execSQL(query);
+                        }
                     }
                     else if (reqCode==6) {
                         no6 = no;
-                        btn6.setText(name + " : " + no6 + "\n");
+                        btn6.setText(name);
+                        query = "SELECT * FROM " + Constants.TABLE_CALL_NUMBERS + " WHERE idCall = 5";
+                        c = db.rawQuery(query, null);
+                        if (c.moveToNext()) {
+                            query = "UPDATE " + Constants.TABLE_CALL_NUMBERS + " SET name = '" + name + "', number = '" + no6 + "' WHERE idCall = 5";
+                            db.execSQL(query);
+                        }
+                        else {
+                            query = "INSERT INTO " + Constants.TABLE_CALL_NUMBERS + " VALUES ('5', '" + name + "', '" + no6 + "');";
+                            db.execSQL(query);
+                        }
                     }
 
-                    id = null;
-                    name = null;
-                    no = null;
-                    phoneCur = null;
+
                 }
-                contect_resolver = null;
-                cur = null;
-                //                      populateContacts();
+
             }
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
