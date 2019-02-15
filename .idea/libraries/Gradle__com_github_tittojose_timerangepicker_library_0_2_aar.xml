@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.tittojose:timerangepicker-library:0.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/62e61be14b8ef7a837ee88717ca3493ba6f59af2/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/62e61be14b8ef7a837ee88717ca3493ba6f59af2/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.tittojose/timerangepicker-library/0.2/1be4ebe76c6a2e0eb40cb38ddb417056b1c7aa2b/timerangepicker-library-0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

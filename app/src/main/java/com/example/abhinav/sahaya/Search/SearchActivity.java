@@ -23,12 +23,12 @@ import java.util.List;
 public class SearchActivity extends ListActivity {
 
         private PackageManager packageManager = null;
-        private List<ApplicationInfo> applist = null;
-        private ApplicationAdapter listadaptor = null;
+    private List<ApplicationInfo> applist = null;
+    private ApplicationAdapter listadaptor = null;
 
-        @Override
-        public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
         final EditText SearchText = (EditText)findViewById(R.id.editText);
@@ -57,7 +57,7 @@ public class SearchActivity extends ListActivity {
 
 
 
-        }
+    }
 
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {

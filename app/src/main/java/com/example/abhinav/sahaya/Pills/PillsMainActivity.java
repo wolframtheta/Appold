@@ -35,6 +35,15 @@ public class PillsMainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        imageSettings.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                return false;
+            }
+        });
+
+
     }
 
 

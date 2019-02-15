@@ -1,3 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        is-multidex="true"
+        jar="D:\Users\Xavier\.android\build-cache\94749f331194696a7bc69678123b5a6a7cb4e79b\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8a0cab6c96fb94a28534e7d20be3f08f880dee00">
+        <dex dex="D:\Users\Xavier\Projects\appold\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7cedc5bf29aaa2608e06191ce8367117b0bd4ccb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Users\Xavier\Projects\appold\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c323c36ecc68965c4cfb460f7721113d2b61ed03">
+        <dex dex="D:\Users\Xavier\Projects\appold\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_520de57a8b684da4ce1f647571ac6f7ac2dd66b4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Users\Xavier\.gradle\caches\modules-2\files-2.1\com.github.jsqlparser\jsqlparser\0.9.2\c3319d039ca68c3406777c034e8fa33536f4033d\jsqlparser-0.9.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c3319d039ca68c3406777c034e8fa33536f4033d">
+        <dex dex="D:\Users\Xavier\Projects\appold\app\build\intermediates\transforms\dex\debug\folders\1000\10\jsqlparser-0.9.2_f50bc26946f925e0feb54636f356bf9796dee252\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Users\Xavier\Projects\appold\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="45c6602db466a562d8cbd575da31710df1124dc8">
+        <dex dex="D:\Users\Xavier\Projects\appold\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_a2af7f43448d3baaf9343ec84dd0d1fbb1603b68\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Users\Xavier\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.4\5fe28b9518e58819180a43a850fbc0dd24b7c050\commons-lang3-3.4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5fe28b9518e58819180a43a850fbc0dd24b7c050">
+        <dex dex="D:\Users\Xavier\Projects\appold\app\build\intermediates\transforms\dex\debug\folders\1000\10\commons-lang3-3.4_cc17ad655ad344b9ed13be592deaffc1b1124e58\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Users\Xavier\.android\build-cache\93f2cd92a254e4af92603701413a6668455b925e\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="D:\Users\Xavier\Projects\appold\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_22cff595c1b681985d0e64c4fdb5ce120686d629\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Users\Xavier\.android\build-cache\0f20a1104ba3c09ca8d0bbd4accd443258c6f617\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="D:\Users\Xavier\Projects\appold\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b1528b0bc2622544f1e8d0a5715d6b22fa67295b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Users\Xavier\.android\build-cache\eadca4cc08f10544989d37770bc765b7f500f945\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e83c9dc02bf7c942194968c78efcd91b419bb4cb">
+        <dex dex="D:\Users\Xavier\Projects\appold\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7163f1edaebcca273379aa7966a7101227b7d222\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Users\Xavier\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="D:\Users\Xavier\Projects\appold\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.1.1_ef8ed489a897890dfa84831e760766260d1b3d4f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Users\Xavier\.android\build-cache\62e61be14b8ef7a837ee88717ca3493ba6f59af2\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c56a9426973c9e4896d1f4680457a1c5fca24117">
+        <dex dex="D:\Users\Xavier\Projects\appold\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_8ca412992335f46f06893ef1cb1300b5184804f3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Users\Xavier\.android\build-cache\9be52abf33541654752a3117b0dbc5e0bbf26299\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="D:\Users\Xavier\Projects\appold\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_9c71d649fe41c08a23f28e9abac6fcab0038a97b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Users\Xavier\.android\build-cache\0f20a1104ba3c09ca8d0bbd4accd443258c6f617\output\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="D:\Users\Xavier\Projects\appold\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.1.1_4ac27965c2a611f6c713b42dfcddff6907df3897\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Users\Xavier\.android\build-cache\e954ed61d29e293b3e3cceb63388ecc9f357a228\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="D:\Users\Xavier\Projects\appold\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_9284a0afb80b1a0bb4614d5a5d355c580dcfbda8\classes.dex" />
+    </item>
+
+</items>
